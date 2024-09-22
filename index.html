@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türkiye Haritası</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- OpenLayers kütüphanesinin CSS dosyasını dahil ediyoruz -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.20.1/ol.css" type="text/css">
+
+    <!-- Font Awesome kütüphanesinin CSS dosyasını dahil ediyoruz -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- jQuery kütüphanesinin JS dosyasını dahil ediyoruz -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+
+    <!-- DataTables kütüphanesinin CSS ve JS dosyalarını dahil ediyoruz -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" defer></script>
+
+    <!-- jsPanel CSS ve JavaScript -->
+    <link href="https://cdn.jsdelivr.net/npm/jspanel4@4.15.0/dist/jspanel.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jspanel4@4.15.0/dist/jspanel.js" defer></script>
+
+    <!-- OpenLayers kütüphanesinin JavaScript dosyasını dahil ediyoruz -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.20.1/ol.js" defer></script>
+
+    
+</head>
+
+<body>
+    <nav>
+        <!-- Butonlar için basit bir navbar -->
+        <button id="addPoint">Add Point</button>
+        <button id="query">Query</button>
+    </nav>
+    <!-- Haritanın yerleştirileceği div -->
+    <div id="map" class="map"></div>
+    <div id="updatePanel" class="update-panel">
+        <button id="dragUpdateBtn">Sürükleyerek Güncelle</button>
+        <button id="panelUpdateBtn">Panelle Güncelle</button>
+    </div>
+
+    <!-- Panelle Güncelle formu -->
+    <div id="updateForm" style="display:none;">
+        <label>X:</label><input type="text" id="updateX"><br>
+        <label>Y:</label><input type="text" id="updateY"><br>
+        <label>Name:</label><input type="text" id="updateName"><br>
+        <button id="saveUpdateBtn">Güncelle</button>
+    </div>
+
+    <!-- JavaScript dosyasını en son dahil ediyoruz -->
+    <script src="/js/main.js"></script>
+</body>
+
+</html>
